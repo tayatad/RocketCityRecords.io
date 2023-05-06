@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0222)https://alt-5f7ce11c673e5.blackboard.com/bbcswebdav/pid-11266092-dt-content-rid-64933420_1/courses/CCC_202320_CIS_207_21148/survey_data.html?one_hash=D1DC578B7D86C404272C48EF33723886&f_hash=F4F90D77B05064B3A3A6B4CC0691B17B -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Survey Data</title>
+<style>
+    body {
+    	width: 500px;
+    	margin: 0 auto;
+    	padding: 0 30px;
+    	border: 2px solid blue;
+    }
+    dt {
+        font-weight: bold;
+    }
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    var query = location.search.replace("?", "");
+    if ( query == "" ) return;
+    
+    var fields = query.split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<dl>");
+        var field_parts;
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<dt>" + field_parts[0] + "</dt>");
+            document.write("<dd>" + field_parts[1] + "</dd>");
+        }
+        document.write("</dl>");
+    }
+}
+//]]>
+</script>
+</head>
+
+<body>
+    <h1>Survey Data</h1>
+    <script>display_data();</script><dl><dt></dt><dd></dd><dt></dt><dd></dd></dl>
+
+<div id="hl-aria-live-message-container" aria-live="polite" class="visually-hidden"></div><div id="hl-aria-live-alert-container" role="alert" aria-live="assertive" class="visually-hidden"></div></body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE = html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Rocket City Records</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+
+        <header>
+            <a href="#" class="brand">Rocket City Records</a>
+            <div class="menu">
+                <div class="btn">
+                    <i class="fas fa-times close-btn"></i>
+                </div>
+                <a href="index.html">Home</a>
+                <a href="index2.html">Records</a>
+                <a href="index3.html">Mailing List</a>
+            </div>
+            <div class="btn">
+                <i class="fas fa-bars menu-btn"></i>
+            </div>
+        </header>
+        <section class="section-main">
+            <h1>Rocket City Records</h1>
+        </section>
+        <section class="section-two">
+            <h2>Welcome to Rocket City Records!</h2>
+            <p>Rocket City Records is a brand new business openining in Huntsville, Alabama.  We will offer exclusive offers on physical copies of music such as vinyl records, CD's, and more!</p>
+            <p>Be sure to make a trip to Rocket City Records once we have found our location and opened officially!</p>
+            <h2>Visit our other brands!</h2>
+            <p>Rocket City Records is one in many brands provided to Huntsville by our company!</p>
+            <p>Join our mailing list to get updates on all businesses and offers that we provide!</p>
+        </section>
+
+        <script type="text/javascript">
+            
+            window.addEventListener("scroll", function(){
+              var header = document.querySelector("header");
+              header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+
+           
+            var menu = document.querySelector('.menu');
+            var menuBtn = document.querySelector('.menu-btn');
+            var closeBtn = document.querySelector('.close-btn');
+
+            menuBtn.addEventListener("click", () => {
+            menu.classList.add('active');
+            });
+
+            closeBtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+             });
+        </script>
+        
+
+    </body>
+</html>
